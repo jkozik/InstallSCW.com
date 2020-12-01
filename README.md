@@ -13,7 +13,7 @@ $ git clone https://github.com/jkozik/InstallSCW.com
 $ docker build -t jkozik/scw.com .
 $ docker run -dit --name scw.com-app -p 8084:80 jkozik/scw.com
 ```
-This should work, but verify it by going to a browser and try http://<ipaddr>/wxindex.php:8084
+This should work, but verify it by going to a browser and try http://192.168.x.y/wxindex.php:8084
 
 To help with troubleshooting, you'll need the following commands:
 ```
