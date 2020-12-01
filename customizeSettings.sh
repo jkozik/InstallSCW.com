@@ -79,6 +79,13 @@ sed -i '/External Links/, /^<.ul>/ c\
 </ul>\
 ' menubar.php
 
+echo "Customize flyout-menu.xml"
+sed -i '/Nearby METAR Reports/a\
+                <item caption="Steel Guages" link="wxssgaugesawn.php"/>\
+                <item caption="Current Weather Summary" link="wxsummaryawn.php"/>\
+' flyout-menu.xml
+
+
 #echo "Customize include-wxstatus.php"
 #sed -i '/realtimefile/s/15/60/' include-wxstatus.php
 
