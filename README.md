@@ -22,4 +22,11 @@ $ docker exec -it scw.com-app /bin/bash
 $ docker logs -f scw.com-app
 $ docker stop scw.com-app; docker rm scw.com-app
 ```
+The AWN-Plugin needs a helper cronjob to fetch and save yesterday's data.  Since it is kinda hard to do more than one task per container, I decided to use the host's cron to trigger a daily polling of yesterday's data from the AmbientWeather.net API.  The cronjob needs to execute a php script on the web server.  It is easily run with a wget/curl one line script. I run this every hour a 58 minutes past.  The actual php file does timezone checking and only really fetches the data at 11:59pm every day. 
+
+cronjob on host (not in docker container):
+```
+58 * * * * wget http://192.168.100.178:8084/saveYesterday.php >> /home/jkozik/logs/awn.log 2>&1
+#blank line
+```
 
