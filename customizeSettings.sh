@@ -83,6 +83,8 @@ echo "Customize flyout-menu.xml"
 sed -i '/Nearby METAR Reports/a\
                 <item caption="Steel Guages" link="wxssgaugesawn.php"/>\
                 <item caption="Current Weather Summary" link="wxsummaryawn.php"/>\
+                <item caption="Station Graphs" link="wxgraphsawn.php"/>\
+     
 ' flyout-menu.xml
 
 
