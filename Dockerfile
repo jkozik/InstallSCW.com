@@ -26,6 +26,7 @@ RUN cd /var/www/html && \
     unzip meteotreviglio-icons.zip && rm meteotreviglio-icons.zip && \
     echo
 #COPY flyout-menu.xml /var/www/html
+COPY  saveYesterday.php /var/www/html
 
 RUN chown -R www-data:www-data * && \
     chmod -R 755 . && \
