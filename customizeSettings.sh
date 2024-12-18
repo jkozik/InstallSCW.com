@@ -1,7 +1,7 @@
 echo "Customize Settings.php"
 sed -i  -e  '/SITE\[\x27organ/s/= \x27.*;/= \x27SanCapWeather.com\x27;/' \
         -e  '/SITE\[\x27copyr/s/Your Weather Website/SanCapWeather.com/' \
-        -e  '/SITE\[\x27location/s/Somewhere, SomeState, USA/Sanibel, Floria, USA/' \
+        -e  '/SITE\[\x27location/s/Somewhere, SomeState, USA/Sanibel, Florida, USA/' \
         -e  '/SITE\[\x27email/s/mailto:somebody@somemail.org/jackkozik at email.com/' \
         -e  '/SITE\[\x27latitude/s/= \x27.*;/= \x2726.468666\x27;/' \
         -e  '/SITE\[\x27longitude/s/= \x27.*;/= \x27-82.159859\x27;/' \
